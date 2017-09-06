@@ -10,6 +10,9 @@
     "body-parser": "*",
     "ejs": "*"
   },
+  "engines": {
+    "node": "6.11.2"
+  },
   "author": "",
   "license": "ISC"
 }
