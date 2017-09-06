@@ -14,7 +14,8 @@ app.use(bodyParser.urlencoded({extended: false})); // converts request body to j
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res, next) => {
-	res.send('Hello, World!');
+	var company = process.env.COMPANY || 'World';
+	res.send('Hello, ' + company + '!');
 });
 
 app.listen(port, (err) => {
