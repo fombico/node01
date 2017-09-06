@@ -8,7 +8,9 @@
     "mongoose": "*",
     "morgan": "*",
     "body-parser": "*",
-    "ejs": "*"
+    "ejs": "*",
+    "winston": "*",
+    "winston-mongodb": "*"
   },
   "engines": {
     "node": "6.11.2"

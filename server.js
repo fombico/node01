@@ -3,7 +3,12 @@ var app = require('express')(),
 	server = require('http').createServer(app),
 	morgan = require('morgan'),
 	bodyParser = require('body-parser'),
-	mongoose = require('mongoose');
+	mongoose = require('mongoose'),
+	winston = require('winston'),
+	winstonMongo = require('winston-mongodb').MongoDb;
+
+winston.add(winston.transports.File, {filename: 'logs.log'});
+winston.add(winston.transports.MongoDB, {db: 'mongodb://localhost/winstontest'});
 
 mongoose.connect('mongodb://localhost/mongooseDemo', {
   useMongoClient: true
@@ -19,5 +24,6 @@ app.get('/', (req, res, next) => {
 });
 
 app.listen(port, (err) => {
-	console.log('listening on %s', port);
+	winston.log('info', 'listening on %s', port);
+	winston.log('info', 'foo', {foo:'bar'});
 });
