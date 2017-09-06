@@ -1,0 +1,11 @@
+{
+  "name": "node01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies" : {
+  	"express": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}
