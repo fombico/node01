@@ -4,13 +4,7 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
-    "morgan": "*",
-    "body-parser": "*",
-    "ejs": "*",
-    "winston": "*",
-    "winston-mongodb": "*"
+    "express": "*"
   },
   "engines": {
     "node": "6.11.2"
